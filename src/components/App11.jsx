@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, USESTATE } from "react";
+import { useEffect, useState } from "react";
 export default function App11() {
   useEffect(() => {
     console.log("Component Mounted");
