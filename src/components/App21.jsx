@@ -1,9 +1,8 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import Register from "./Register";
 import Login from "./Login";
+import AppContext from "./AppContext"; 
 import "./App21.css";
-
-export const AppContext = createContext();
 
 export default function App21() {
   const [users, setUsers] = useState([]);
