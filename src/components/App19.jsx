@@ -5,14 +5,16 @@ export default function App19() {
   const [runs, setRuns] = useState(0);
   const [wickets, setWickets] = useState(0);
   const [message, setMessage] = useState("");
+  const [confetti, setConfetti] = useState(false);// eslint-disable-line no-unused-vars
 
   const gameOver = wickets >= 10;
 
   useEffect(() => {
     if (gameOver) {
       setMessage("Game Over!");
+      setConfetti(true);
     }
-  }, [gameOver]);
+  }, [wickets, gameOver]);
 
   const handleRun = () => {
     if (!gameOver) {
@@ -25,7 +27,12 @@ export default function App19() {
     if (!gameOver) {
       const newWickets = wickets + 1;
       setWickets(newWickets);
-      setMessage(newWickets >= 10 ? "Game Over!" : "Better Luck Next Time!");
+      if (newWickets >= 10) {
+        setMessage("Game Over!");
+        setConfetti(true);
+      } else {
+        setMessage("Better Luck Next Time!");
+      }
     }
   };
 
@@ -33,6 +40,7 @@ export default function App19() {
     setRuns(0);
     setWickets(0);
     setMessage("");
+    setConfetti(false);
   };
 
   return (
@@ -51,11 +59,7 @@ export default function App19() {
 
           <div className="message-box">
             <h3 style={{ color: "#d86c7a" }}>{message}</h3>
-            {gameOver && (
-              <button onClick={handleReset} className="reset-button">
-                Restart Game
-              </button>
-            )}
+            {gameOver && <button onClick={handleReset} className="reset-button">Restart Game</button>}
           </div>
         </div>
       </div>

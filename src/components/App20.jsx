@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import App20a from "./App20a";
 import App20b from "./App20b";
-import { useContext } from "react";
-import { AppContext } from "./App20";
-import { createContext } from "react";
+import { AppContext } from "./AppContext";
+
 export default function App20() {
   const [count, setCount] = useState(0);
+
   return (
     <div>
       <h1>App20</h1>

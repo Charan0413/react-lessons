@@ -1,6 +1,6 @@
-import { USESTATE } from "react";
-import REACTLOGO from "./assets/react.svg";
-import VITELOGO from "/vite.svg";
+import { useState } from "react";// eslint-disable-line no-unused-vars
+import reactLogo from "./assets/react.svg";// eslint-disable-line no-unused-vars
+import viteLogo from "/vite.svg";// eslint-disable-line no-unused-vars
 import App1 from "./components/App1";
 import App2 from "./components/App2";
 import App3 from "./components/App3";
@@ -22,6 +22,8 @@ import App18 from "./components/App18";
 import App19 from "./components/App19";
 import App20 from "./components/App20";
 import App21 from "./components/App21";
+import App22 from "./components/App22";
+import App23 from "./components/App23";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -53,6 +55,8 @@ function App() {
         <Route path="/app19" element={<App19 />}></Route>
         <Route path="/app20" element={<App20 />}></Route>
         <Route path="/app21" element={<App21 />}></Route>
+        <Route path="/app22" element={<App22 />}></Route>
+        <Route path="/app23" element={<App23 />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

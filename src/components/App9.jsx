@@ -20,5 +20,3 @@ export default function App9() {
     </div>
   );
 }
-
-

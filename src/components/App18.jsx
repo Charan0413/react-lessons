@@ -4,16 +4,14 @@ export default function App18() {
   const [count, setCount] = useState(0);
   const [flag, setFlag] = useState(10);
 
-  const f1 = () => {
-    let i = 1;
-    while (i < flag ** 2) {
-      i++;
+  const result = useMemo(() => {
+    let i;
+    for (i = 1; i < flag ** 2; i++) {
+      // Simulate computation
     }
     console.log("F1 function called");
     return i;
-  };
-
-  const result = useMemo(f1, [flag]);
+  }, [flag]);
 
   return (
     <div>

@@ -1,5 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; // eslint-disable-line no-unused-vars
+
 export default function App11() {
   useEffect(() => {
     console.log("Component Mounted");
